@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treefort Cafe | Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-oat text-bark antialiased pb-24 md:pb-0 selection:bg-moss selection:text-oat">
+<!-- ==================== 1. FLOATING PILL NAVIGATION ==================== -->
+  <div class="sticky top-0 z-40 px-3 sm:px-6 pt-3">
+    <header class="size-max-w-6xl mx-auto bg-oat/90 backdrop-blur-md border border-bark/10 rounded-full px-4 sm:px-6 size-h-14 sm-size-h-16 layout-flex layout-items-center layout-justify-between shadow-xs">
+      <!-- [EDIT HERE] BRAND LOGO & NAME: Replace the "T" circle with an <img> tag if you have a logo file -->
+      <a href="index.html#top" class="layout-flex layout-items-center gap-2.5 group">
+        <span class="size-w-8 size-h-8 rounded-full bg-moss text-oat layout-flex layout-items-center layout-justify-center type-serif weight-bold type-base">
+          T
+        </span>
+        <span class="type-serif weight-bold type-lg sm-type-xl type-track-tight text-bark">
+          Treefort Cafe
+        </span>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md-layout-flex layout-items-center gap-8 type-sm weight-medium text-stone-700">
+        <a href="menu.html#highlights" class="hover-text-moss ui-transition" data-en="Menu" data-bm="Menu">Menu</a>
+        <a href="space.html#sanctuary" class="hover-text-moss ui-transition" data-en="The Space" data-bm="Ruang Kafe">The Space</a>
+        <a href="reviews.html#reviews" class="hover-text-moss ui-transition" data-en="Reviews" data-bm="Ulasan">Reviews</a>
+        <a href="visit.html#visit" class="hover-text-moss ui-transition" data-en="Visit &amp; FAQ" data-bm="Lokasi &amp; FAQ">Visit &amp; FAQ</a>
+      </nav>
+
+      <!-- Right Controls: Language Toggle + Reserve Button -->
+      <div class="layout-flex layout-items-center gap-2">
+        <div class="layout-flex layout-items-center bg-linen rounded-full p-0.5 type-11 weight-bold border border-bark/10">
+          <button type="button" id="btn-en" class="px-2.5 py-1 rounded-full bg-moss text-oat ui-transition">EN</button>
+          <button type="button" id="btn-bm" class="px-2.5 py-1 rounded-full text-stone-600 hover-text-bark ui-transition">BM</button>
+        </div>
+
+        <button type="button" data-booking-purpose="Table Reservation" class="hidden sm-layout-inline-flex layout-items-center gap-1.5 bg-cedar hover-bg-bark text-oat type-xs sm-type-sm weight-semibold px-4 py-2 rounded-full ui-transition active:scale-95">
+          <span data-en="Reserve" data-bm="Tempah">Reserve</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- ==================== 4. SPLIT MENU HIGHLIGHTS (EDITORIAL LIST + VISUAL CARDS) ==================== -->
+  <section id="highlights" class="py-14 sm:py-20 bg-linen/70 border-y border-bark/10">
+    <div class="size-max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="layout-flex layout-column md-layout-row md-layout-items-end layout-justify-between gap-4 mb-10">
+        <div>
+          <p class="type-xs weight-bold uppercase type-track-widest text-cedar" data-en="From the Kitchen &amp; Bar" data-bm="Dari Dapur &amp; Bar Kopi">From the Kitchen &amp; Bar</p>
+          <h2 class="type-serif type-3xl sm-type-4xl weight-bold text-bark mt-1" data-en="Treefort Signatures" data-bm="Menu Pilihan Treefort">Treefort Signatures</h2>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="layout-inline-flex bg-oat p-1 rounded-full border border-bark/10 layout-self-start">
+          <button type="button" class="menu-tab px-4 py-1.5 rounded-full type-xs sm-type-sm weight-semibold bg-moss text-oat ui-transition" data-filter="all" data-en="All" data-bm="Semua">All</button>
+          <button type="button" class="menu-tab px-4 py-1.5 rounded-full type-xs sm-type-sm weight-semibold text-stone-600 hover-text-bark ui-transition" data-filter="platters" data-en="Sharing Platters" data-bm="Set Kongsi">Sharing Platters</button>
+          <button type="button" class="menu-tab px-4 py-1.5 rounded-full type-xs sm-type-sm weight-semibold text-stone-600 hover-text-bark ui-transition" data-filter="brunch" data-en="All-Day Plates" data-bm="Hidangan Utama">All-Day Plates</button>
+          <button type="button" class="menu-tab px-4 py-1.5 rounded-full type-xs sm-type-sm weight-semibold text-stone-600 hover-text-bark ui-transition" data-filter="sips" data-en="Coffee &amp; Matcha" data-bm="Kopi &amp; Matcha">Coffee &amp; Matcha</button>
+        </div>
+      </div>
+
+      <!-- Horizontal Compact Feature Cards (Distinct from vertical 3-column grid) -->
+      <!-- [EDIT HERE] SIGNATURE MENU ITEMS: Change each item's img src="...", dish name, RM price, and description below -->
+      <div class="layout-grid md-grid-columns-2 gap-5" id="menuGrid">
+        <!-- Dish 1 -->
+        <div class="menu-card bg-oat rounded-3xl p-4 sm:p-5 border border-bark/10 layout-flex layout-column sm-layout-row gap-4 layout-items-center" data-category="platters">
+          <!-- [EDIT HERE] MENU PHOTO 1 -->
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80"
+               data-fallback-src="https://placehold.co/300x300/2D4739/F6F3EC?text=Treefort+Platter"
+               alt="Treefort Sharing Platter" class="size-w-full sm-size-w-36 size-h-40 sm-size-h-36 rounded-2xl object-cover layout-shrink-0" />
+          <div class="layout-flex-1 layout-flex layout-column layout-justify-between size-w-full">
+            <div>
+              <div class="layout-flex layout-items-start layout-justify-between gap-2">
+                <h3 class="type-serif type-lg sm-type-xl weight-bold text-bark">Treefort Harvest Platter (2–3 Pax)</h3>
+                <span class="weight-bold text-cedar whitespace-nowrap">RM 78</span>
+              </div>
+              <p class="type-xs sm-type-sm text-stone-600 mt-1.5 type-leading-relaxed">
+                Herb-grilled chicken, spiced beef ribs, crispy potato wedges, seasonal greens, sourdough toast &amp; house dips.
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-bark/10 layout-flex layout-items-center layout-justify-between">
+              <span class="type-11 weight-semibold text-moss" data-en="Best for sharing" data-bm="Sesuai dikongsi">Best for sharing</span>
+              <button type="button" data-booking-purpose="Table Reservation (Harvest Platter)" class="type-xs weight-bold text-bark hover-text-cedar underline underline-offset-4" data-en="Pre-book this →" data-bm="Tempah awal →">
+                Pre-book this →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="menu-card bg-oat rounded-3xl p-4 sm:p-5 border border-bark/10 layout-flex layout-column sm-layout-row gap-4 layout-items-center" data-category="platters">
+          <!-- [EDIT HERE] MENU PHOTO 2 -->
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=80"
+               data-fallback-src="https://placehold.co/300x300/2D4739/F6F3EC?text=Kampung+Set"
+               alt="Nusantara Dulang Feast" class="size-w-full sm-size-w-36 size-h-40 sm-size-h-36 rounded-2xl object-cover layout-shrink-0" />
+          <div class="layout-flex-1 layout-flex layout-column layout-justify-between size-w-full">
+            <div>
+              <div class="layout-flex layout-items-start layout-justify-between gap-2">
+                <h3 class="type-serif type-lg sm-type-xl weight-bold text-bark">Nusantara Dulang Feast (2 Pax)</h3>
+                <span class="weight-bold text-cedar whitespace-nowrap">RM 72</span>
+              </div>
+              <p class="type-xs sm-type-sm text-stone-600 mt-1.5 type-leading-relaxed">
+                Smoked duck lemak cili api, sambal tiger prawns, crispy tempeh, ulam-ulaman, salted egg &amp; fragrant steamed rice.
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-bark/10 layout-flex layout-items-center layout-justify-between">
+              <span class="type-11 weight-semibold text-moss" data-en="Local favorite" data-bm="Kegemaran ramai">Local favorite</span>
+              <button type="button" data-booking-purpose="Table Reservation (Nusantara Feast)" class="type-xs weight-bold text-bark hover-text-cedar underline underline-offset-4" data-en="Pre-book this →" data-bm="Tempah awal →">
+                Pre-book this →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="menu-card bg-oat rounded-3xl p-4 sm:p-5 border border-bark/10 layout-flex layout-column sm-layout-row gap-4 layout-items-center" data-category="brunch">
+          <!-- [EDIT HERE] MENU PHOTO 3 -->
+          <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80"
+               data-fallback-src="https://placehold.co/300x300/EBE5D8/2D4739?text=Forest+Brunch"
+               alt="Treefort Big Breakfast" class="size-w-full sm-size-w-36 size-h-40 sm-size-h-36 rounded-2xl object-cover layout-shrink-0" />
+          <div class="layout-flex-1 layout-flex layout-column layout-justify-between size-w-full">
+            <div>
+              <div class="layout-flex layout-items-start layout-justify-between gap-2">
+                <h3 class="type-serif type-lg sm-type-xl weight-bold text-bark">Treefort Timber Breakfast</h3>
+                <span class="weight-bold text-cedar whitespace-nowrap">RM 28</span>
+              </div>
+              <p class="type-xs sm-type-sm text-stone-600 mt-1.5 type-leading-relaxed">
+                Free-range scrambled eggs on toasted country sourdough, beef bratwurst, sautéed forest mushrooms &amp; cherry tomatoes.
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-bark/10 type-11 weight-medium text-stone-500">
+              Served all day · Walk-in or book
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 4 -->
+        <div class="menu-card bg-oat rounded-3xl p-4 sm:p-5 border border-bark/10 layout-flex layout-column sm-layout-row gap-4 layout-items-center" data-category="brunch">
+          <!-- [EDIT HERE] MENU PHOTO 4 -->
+          <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=80"
+               data-fallback-src="https://placehold.co/300x300/EBE5D8/2D4739?text=Pesto+Pasta"
+               alt="Creamy Basil Pesto Pasta" class="size-w-full sm-size-w-36 size-h-40 sm-size-h-36 rounded-2xl object-cover layout-shrink-0" />
+          <div class="layout-flex-1 layout-flex layout-column layout-justify-between size-w-full">
+            <div>
+              <div class="layout-flex layout-items-start layout-justify-between gap-2">
+                <h3 class="type-serif type-lg sm-type-xl weight-bold text-bark">Garden Pesto &amp; Grilled Chicken</h3>
+                <span class="weight-bold text-cedar whitespace-nowrap">RM 26</span>
+              </div>
+              <p class="type-xs sm-type-sm text-stone-600 mt-1.5 type-leading-relaxed">
+                Al dente linguine tossed in house-blended sweet basil &amp; cashew pesto, topped with chargrilled chicken &amp; parmesan.
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-bark/10 type-11 weight-medium text-stone-500">
+              Vegetarian option available upon request
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 5 -->
+        <div class="menu-card bg-oat rounded-3xl p-4 sm:p-5 border border-bark/10 layout-flex layout-column sm-layout-row gap-4 layout-items-center" data-category="sips">
+          <!-- [EDIT HERE] MENU PHOTO 5 -->
+          <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=500&q=80"
+               data-fallback-src="https://placehold.co/300x300/2D4739/F6F3EC?text=Matcha+Cloud"
+               alt="Uji Matcha Cloud Latte" class="size-w-full sm-size-w-36 size-h-40 sm-size-h-36 rounded-2xl object-cover layout-shrink-0" />
+          <div class="layout-flex-1 layout-flex layout-column layout-justify-between size-w-full">
+            <div>
+              <div class="layout-flex layout-items-start layout-justify-between gap-2">
+                <h3 class="type-serif type-lg sm-type-xl weight-bold text-bark">Uji Matcha &amp; Hojicha</h3>
+                <span class="weight-bold text-cedar whitespace-nowrap">From RM 14</span>
+              </div>
+              <p class="type-xs sm-type-sm text-stone-600 mt-1.5 type-leading-relaxed">
+                First-harvest ceremonial Uji Matcha whisked to order, Strawberry Matcha Cloud &amp; Roasted Hojicha Oat Latte.
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-bark/10 type-11 weight-medium text-stone-500">
+              Oat &amp; soy milk upgrades available
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 6 -->
+        <div class="menu-card bg-oat rounded-3xl p-4 sm:p-5 border border-bark/10 layout-flex layout-column sm-layout-row gap-4 layout-items-center" data-category="sips">
+          <!-- [EDIT HERE] MENU PHOTO 6 -->
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80"
+               data-fallback-src="https://placehold.co/300x300/EBE5D8/2D4739?text=Signature+Coffee"
+               alt="Specialty Espresso and Yuzu Tonic" class="size-w-full sm-size-w-36 size-h-40 sm-size-h-36 rounded-2xl object-cover layout-shrink-0" />
+          <div class="layout-flex-1 layout-flex layout-column layout-justify-between size-w-full">
+            <div>
+              <div class="layout-flex layout-items-start layout-justify-between gap-2">
+                <h3 class="type-serif type-lg sm-type-xl weight-bold text-bark">Treefort Espresso &amp; Fizz</h3>
+                <span class="weight-bold text-cedar whitespace-nowrap">From RM 11</span>
+              </div>
+              <p class="type-xs sm-type-sm text-stone-600 mt-1.5 type-leading-relaxed">
+                Gula Melaka Cream Latte, Iced Yuzu Espresso Tonic, Single-Origin Pour Over &amp; Passionfruit Mint Cooler.
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-bark/10 type-11 weight-medium text-stone-500">
+              Freshly roasted beans weekly
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full PDF Menu Banner -->
+      <div class="mt-8 bg-moss text-oat rounded-3xl p-6 sm:p-8 layout-flex layout-column sm-layout-row layout-items-center layout-justify-between gap-4">
+        <div>
+          <h3 class="type-serif type-xl sm-type-2xl weight-bold" data-en="Explore our complete menu &amp; seasonal bakes" data-bm="Lihat menu penuh &amp; kek harian kami">
+            Explore our complete menu &amp; seasonal bakes
+          </h3>
+          <p class="type-xs sm-type-sm text-stone-200 mt-1" data-en="Includes croissants, burnt cheesecakes, kids' meals, and party catering trays." data-bm="Termasuk croissant, kek keju, hidangan kanak-kanak, dan set katering.">
+            Includes croissants, burnt cheesecakes, kids' meals, and party catering trays.
+          </p>
+        </div>
+        <button type="button" data-open-pdf class="size-w-full sm-size-w-auto px-6 py-3 rounded-full bg-oat text-bark hover-bg-linen weight-bold type-xs sm-type-sm ui-transition layout-shrink-0">
+          <span data-en="Open Full PDF Menu ↗" data-bm="Buka Menu PDF ↗">Open Full PDF Menu ↗</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer class="bg-moss text-oat py-10">
+    <div class="size-max-w-6xl mx-auto px-4 sm:px-6 layout-flex layout-column sm-layout-row layout-items-center layout-justify-between gap-4 type-sm">
+      <div class="layout-flex layout-items-center gap-2.5">
+        <span class="size-w-7 size-h-7 rounded-full bg-oat text-moss layout-flex layout-items-center layout-justify-center type-serif weight-bold type-sm">T</span>
+        <span class="type-serif weight-bold type-base">Treefort Cafe</span>
+        <span class="text-stone-300 type-xs">· @treefortcafe</span>
+      </div>
+      <div class="layout-flex layout-wrap layout-items-center gap-5 type-xs text-stone-200">
+        <a href="menu.html#highlights" class="hover-text-white">Menu</a>
+        <a href="space.html#sanctuary" class="hover-text-white">Space</a>
+        <a href="https://www.instagram.com/treefortcafe/" target="_blank" rel="noopener" class="hover-text-white">Instagram</a>
+        <!-- Replace # with the cafe's Facebook page URL. -->
+        <a href="#" class="hover-text-white">Facebook</a>
+        <!-- Replace # with the cafe's TikTok profile URL. -->
+        <a href="#" class="hover-text-white">TikTok</a>
+        <button type="button" data-booking-purpose="Table Reservation" class="text-oat weight-bold underline underline-offset-4">Book a Table</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 8. STICKY MOBILE BAR ==================== -->
+  <div class="fixed bottom-0 inset-x-0 z-40 md:hidden bg-oat/95 backdrop-blur-md border-t border-bark/10 p-3 layout-flex layout-items-center gap-2.5 shadow-lg">
+    <button type="button" data-open-pdf class="layout-flex-1 py-3 px-4 rounded-full bg-linen border border-bark/15 text-bark weight-bold type-xs text-center" data-en="Menu PDF" data-bm="Menu PDF">
+      Menu PDF
+    </button>
+    <button type="button" data-booking-purpose="Table Reservation" class="layout-flex-2 py-3 px-4 rounded-full bg-moss text-oat weight-bold type-xs text-center shadow-sm" data-en="Reserve Table (WhatsApp)" data-bm="Tempah Meja (WhatsApp)">
+      Reserve Table (WhatsApp)
+    </button>
+  </div>
+
+  <!-- ==================== 9. POPUP BOOKING MODAL ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden layout-items-center layout-justify-center bg-black/60 backdrop-blur-xs p-4">
+    <div class="bg-oat text-bark size-w-full size-max-w-md rounded-3xl p-6 sm:p-7 shadow-2xl border border-bark/10 relative">
+      <button type="button" data-close-booking aria-label="Close modal" class="absolute top-5 right-5 size-w-8 size-h-8 rounded-full bg-linen hover-bg-stone-300 layout-flex layout-items-center layout-justify-center text-bark weight-bold">
+        ✕
+      </button>
+
+      <span class="type-11 weight-bold uppercase type-track-widest text-cedar">Treefort Cafe · WhatsApp</span>
+      <h3 class="type-serif type-2xl weight-bold text-bark mt-0.5">Reserve a Table</h3>
+      <p class="type-xs text-stone-600 mt-1">Complete your details below to open a pre-filled WhatsApp booking message.</p>
+
+      <form data-booking-form="modal" class="space-y-3.5 mt-5">
+        <div>
+          <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Your Name *</label>
+          <input type="text" id="modal-name" required placeholder="e.g. Aina" class="size-w-full px-3.5 py-2.5 rounded-xl bg-white border border-stone-300 type-sm focus:outline-none focus:border-moss" />
+        </div>
+
+        <div>
+          <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Booking Type</label>
+          <select id="modal-purpose" class="size-w-full px-3.5 py-2.5 rounded-xl bg-white border border-stone-300 type-sm focus:outline-none focus:border-moss">
+            <option value="Table Reservation">Table Reservation</option>
+            <option value="Table Reservation (Harvest Platter)">Table Reservation (Harvest Platter)</option>
+            <option value="Table Reservation (Nusantara Feast)">Table Reservation (Nusantara Feast)</option>
+            <option value="Weekend Brunch">Weekend Brunch</option>
+            <option value="Birthday / Celebration">Birthday / Celebration</option>
+            <option value="Group / Private Event">Group / Private Event</option>
+          </select>
+        </div>
+
+        <div class="layout-grid grid-columns-3 gap-2.5">
+          <div>
+            <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Date *</label>
+            <input type="date" id="modal-date" required class="size-w-full px-3 py-2.5 rounded-xl bg-white border border-stone-300 type-xs sm-type-sm focus:outline-none focus:border-moss" />
+          </div>
+          <div>
+            <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Time *</label>
+            <input type="time" id="modal-time" required class="size-w-full px-3 py-2.5 rounded-xl bg-white border border-stone-300 type-xs sm-type-sm focus:outline-none focus:border-moss" />
+          </div>
+          <div>
+            <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Pax *</label>
+            <input type="number" id="modal-pax" min="1" max="40" value="2" required class="size-w-full px-3 py-2.5 rounded-xl bg-white border border-stone-300 type-xs sm-type-sm focus:outline-none focus:border-moss" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Notes (Optional)</label>
+          <input type="text" id="modal-notes" placeholder="e.g. Window table, baby chair" class="size-w-full px-3.5 py-2.5 rounded-xl bg-white border border-stone-300 type-sm focus:outline-none focus:border-moss" />
+        </div>
+
+        <button type="submit" class="size-w-full py-3.5 px-5 rounded-full bg-moss hover-bg-moss-dark text-oat weight-semibold type-sm shadow-md ui-transition mt-2">
+          Send Booking on WhatsApp →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== 10. FULL MENU PDF MODAL ==================== -->
+  <div id="pdfModal" class="fixed inset-0 z-50 hidden layout-items-center layout-justify-center bg-black/70 backdrop-blur-xs p-3 sm:p-6">
+    <div class="bg-oat size-w-full size-max-w-4xl size-h-modal rounded-3xl overflow-hidden shadow-2xl layout-flex layout-column border border-bark/10">
+      <div class="px-5 py-4 bg-white border-b border-stone-200 layout-flex layout-items-center layout-justify-between">
+        <div>
+          <h3 class="type-serif weight-bold type-lg text-bark">Treefort Cafe — Full Menu</h3>
+          <p class="type-xs text-stone-500">All prices in RM. Please inform our staff of any food allergies.</p>
+        </div>
+        <div class="layout-flex layout-items-center gap-2">
+          <button type="button" data-book-pdf class="px-4 py-2 rounded-full bg-moss text-oat type-xs weight-semibold">
+            Book Table
+          </button>
+          <button type="button" data-close-pdf class="size-w-8 size-h-8 rounded-full bg-linen hover-bg-stone-200 layout-flex layout-items-center layout-justify-center text-bark weight-bold">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <div class="layout-flex-1 bg-linen/50 layout-flex layout-column layout-items-center layout-justify-center p-6 text-center">
+        <!--
+          [EDIT HERE] EMBED YOUR FULL PDF MENU:
+          Option A (Google Drive): Upload your menu PDF to Google Drive -> Share -> "Anyone with the link" -> copy link -> change "/view" at the end to "/preview".
+          Option B (Local PDF file): Put "menu.pdf" in the same folder as this HTML file, delete the placeholder <div> below, and uncomment this iframe:
+          <iframe src="menu.pdf" class="size-w-full size-h-full border-0" title="Treefort Cafe Menu PDF"></iframe>
+        -->
+        <div class="size-max-w-md space-y-3">
+          <div class="size-w-12 size-h-12 rounded-2xl bg-moss/10 text-moss layout-flex layout-items-center layout-justify-center mx-auto weight-bold type-lg">PDF</div>
+          <h4 class="type-serif type-xl weight-bold text-bark">Treefort Cafe Digital Menu</h4>
+          <p class="type-sm text-stone-600">
+            Upload Treefort Cafe's menu PDF to Google Drive (shared as <strong>"Anyone with the link"</strong>) and paste the link into <code class="bg-stone-200 px-1.5 py-0.5 rounded type-xs">CAFE_CONFIG.menuPdfUrl</code>.
+          </p>
+          <a id="pdfExternalLink" href="#" target="_blank" rel="noopener" class="inline-block mt-2 px-5 py-2.5 rounded-full bg-moss text-oat type-xs weight-semibold">
+            Open Menu PDF Link ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

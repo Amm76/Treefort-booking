@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treefort Cafe | The Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-oat text-bark antialiased pb-24 md:pb-0 selection:bg-moss selection:text-oat">
+<!-- ==================== 1. FLOATING PILL NAVIGATION ==================== -->
+  <div class="sticky top-0 z-40 px-3 sm:px-6 pt-3">
+    <header class="size-max-w-6xl mx-auto bg-oat/90 backdrop-blur-md border border-bark/10 rounded-full px-4 sm:px-6 size-h-14 sm-size-h-16 layout-flex layout-items-center layout-justify-between shadow-xs">
+      <!-- [EDIT HERE] BRAND LOGO & NAME: Replace the "T" circle with an <img> tag if you have a logo file -->
+      <a href="index.html#top" class="layout-flex layout-items-center gap-2.5 group">
+        <span class="size-w-8 size-h-8 rounded-full bg-moss text-oat layout-flex layout-items-center layout-justify-center type-serif weight-bold type-base">
+          T
+        </span>
+        <span class="type-serif weight-bold type-lg sm-type-xl type-track-tight text-bark">
+          Treefort Cafe
+        </span>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md-layout-flex layout-items-center gap-8 type-sm weight-medium text-stone-700">
+        <a href="menu.html#highlights" class="hover-text-moss ui-transition" data-en="Menu" data-bm="Menu">Menu</a>
+        <a href="space.html#sanctuary" class="hover-text-moss ui-transition" data-en="The Space" data-bm="Ruang Kafe">The Space</a>
+        <a href="reviews.html#reviews" class="hover-text-moss ui-transition" data-en="Reviews" data-bm="Ulasan">Reviews</a>
+        <a href="visit.html#visit" class="hover-text-moss ui-transition" data-en="Visit &amp; FAQ" data-bm="Lokasi &amp; FAQ">Visit &amp; FAQ</a>
+      </nav>
+
+      <!-- Right Controls: Language Toggle + Reserve Button -->
+      <div class="layout-flex layout-items-center gap-2">
+        <div class="layout-flex layout-items-center bg-linen rounded-full p-0.5 type-11 weight-bold border border-bark/10">
+          <button type="button" id="btn-en" class="px-2.5 py-1 rounded-full bg-moss text-oat ui-transition">EN</button>
+          <button type="button" id="btn-bm" class="px-2.5 py-1 rounded-full text-stone-600 hover-text-bark ui-transition">BM</button>
+        </div>
+
+        <button type="button" data-booking-purpose="Table Reservation" class="hidden sm-layout-inline-flex layout-items-center gap-1.5 bg-cedar hover-bg-bark text-oat type-xs sm-type-sm weight-semibold px-4 py-2 rounded-full ui-transition active:scale-95">
+          <span data-en="Reserve" data-bm="Tempah">Reserve</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- ==================== 3. BENTO PHOTO GALLERY ("THE SANCTUARY") ==================== -->
+  <section id="sanctuary" class="py-12 sm:py-16">
+    <div class="size-max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="layout-flex layout-column sm-layout-row sm-layout-items-end layout-justify-between gap-4 mb-8">
+        <div>
+          <p class="type-xs weight-bold uppercase type-track-widest text-cedar" data-en="Atmosphere" data-bm="Suasana">Atmosphere</p>
+          <h2 class="type-serif type-3xl sm-type-4xl weight-bold text-bark mt-1" data-en="A sunlit retreat built for lingering." data-bm="Ruang redup &amp; selesa untuk bersantai.">
+            A sunlit retreat built for lingering.
+          </h2>
+        </div>
+        <a id="igProfileLink" href="https://www.instagram.com/treefortcafe/" target="_blank" rel="noopener" class="layout-inline-flex layout-items-center gap-2 type-xs sm-type-sm weight-bold text-moss hover-text-cedar ui-transition">
+          <span data-en="Follow @treefortcafe on Instagram ↗" data-bm="Ikuti @treefortcafe di Instagram ↗">Follow @treefortcafe on Instagram ↗</span>
+        </a>
+      </div>
+
+      <!-- 3-Column Bento Grid -->
+      <div class="layout-grid grid-columns-1 md-grid-columns-12 gap-4">
+        <div class="md-grid-col-span-5 rounded-3xl overflow-hidden bg-linen border border-bark/10 size-aspect-4-3 md-size-aspect-auto md-size-h-380">
+          <!-- [EDIT HERE] GALLERY PHOTO 1 (Tall Left): Replace src="..." with your cafe interior photo -->
+          <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=900&q=80"
+               data-fallback-src="https://placehold.co/600x700/2D4739/F6F3EC?text=Treefort+Greenery+Corner"
+               alt="Botanical seating corner at Treefort Cafe" class="size-w-full size-h-full object-cover hover-scale-105 ui-transition slow-transition" />
+        </div>
+
+        <div class="md-grid-col-span-4 layout-flex layout-column gap-4 md-size-h-380">
+          <div class="layout-flex-1 rounded-3xl overflow-hidden bg-linen border border-bark/10">
+            <!-- [EDIT HERE] GALLERY PHOTO 2 (Top Middle): Replace src="..." with your coffee bar / seating photo -->
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                 data-fallback-src="https://placehold.co/600x350/EBE5D8/2D4739?text=Pour+Over+Bar"
+                 alt="Specialty coffee bar" class="size-w-full size-h-full object-cover hover-scale-105 ui-transition slow-transition" />
+          </div>
+          <div class="rounded-3xl bg-linen border border-bark/10 p-5 layout-flex layout-column layout-justify-center">
+            <p class="type-serif type-lg weight-bold text-bark" data-en="Work-friendly &amp; family-ready" data-bm="Sesuai untuk kerja &amp; keluarga">Work-friendly &amp; family-ready</p>
+            <p class="type-xs sm-type-sm text-stone-600 mt-1" data-en="Power outlets along window booths, high chairs for little ones, and long communal tables for up to 20 guests." data-bm="Soket elektrik di meja tingkap, kerusi bayi disediakan, dan meja panjang untuk kumpulan hingga 20 orang.">
+              Power outlets along window booths, high chairs for little ones, and long communal tables for up to 20 guests.
+            </p>
+          </div>
+        </div>
+
+        <div class="md-grid-col-span-3 rounded-3xl overflow-hidden bg-linen border border-bark/10 size-aspect-4-3 md-size-aspect-auto md-size-h-380">
+          <!-- [EDIT HERE] GALLERY PHOTO 3 (Tall Right): Replace src="..." with your drink / exterior photo -->
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=700&q=80"
+               data-fallback-src="https://placehold.co/500x700/2D4739/F6F3EC?text=Artisan+Latte"
+               alt="Freshly poured latte art" class="size-w-full size-h-full object-cover hover-scale-105 ui-transition slow-transition" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer class="bg-moss text-oat py-10">
+    <div class="size-max-w-6xl mx-auto px-4 sm:px-6 layout-flex layout-column sm-layout-row layout-items-center layout-justify-between gap-4 type-sm">
+      <div class="layout-flex layout-items-center gap-2.5">
+        <span class="size-w-7 size-h-7 rounded-full bg-oat text-moss layout-flex layout-items-center layout-justify-center type-serif weight-bold type-sm">T</span>
+        <span class="type-serif weight-bold type-base">Treefort Cafe</span>
+        <span class="text-stone-300 type-xs">· @treefortcafe</span>
+      </div>
+      <div class="layout-flex layout-wrap layout-items-center gap-5 type-xs text-stone-200">
+        <a href="menu.html#highlights" class="hover-text-white">Menu</a>
+        <a href="space.html#sanctuary" class="hover-text-white">Space</a>
+        <a href="https://www.instagram.com/treefortcafe/" target="_blank" rel="noopener" class="hover-text-white">Instagram</a>
+        <!-- Replace # with the cafe's Facebook page URL. -->
+        <a href="#" class="hover-text-white">Facebook</a>
+        <!-- Replace # with the cafe's TikTok profile URL. -->
+        <a href="#" class="hover-text-white">TikTok</a>
+        <button type="button" data-booking-purpose="Table Reservation" class="text-oat weight-bold underline underline-offset-4">Book a Table</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 8. STICKY MOBILE BAR ==================== -->
+  <div class="fixed bottom-0 inset-x-0 z-40 md:hidden bg-oat/95 backdrop-blur-md border-t border-bark/10 p-3 layout-flex layout-items-center gap-2.5 shadow-lg">
+    <button type="button" data-open-pdf class="layout-flex-1 py-3 px-4 rounded-full bg-linen border border-bark/15 text-bark weight-bold type-xs text-center" data-en="Menu PDF" data-bm="Menu PDF">
+      Menu PDF
+    </button>
+    <button type="button" data-booking-purpose="Table Reservation" class="layout-flex-2 py-3 px-4 rounded-full bg-moss text-oat weight-bold type-xs text-center shadow-sm" data-en="Reserve Table (WhatsApp)" data-bm="Tempah Meja (WhatsApp)">
+      Reserve Table (WhatsApp)
+    </button>
+  </div>
+
+  <!-- ==================== 9. POPUP BOOKING MODAL ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden layout-items-center layout-justify-center bg-black/60 backdrop-blur-xs p-4">
+    <div class="bg-oat text-bark size-w-full size-max-w-md rounded-3xl p-6 sm:p-7 shadow-2xl border border-bark/10 relative">
+      <button type="button" data-close-booking aria-label="Close modal" class="absolute top-5 right-5 size-w-8 size-h-8 rounded-full bg-linen hover-bg-stone-300 layout-flex layout-items-center layout-justify-center text-bark weight-bold">
+        ✕
+      </button>
+
+      <span class="type-11 weight-bold uppercase type-track-widest text-cedar">Treefort Cafe · WhatsApp</span>
+      <h3 class="type-serif type-2xl weight-bold text-bark mt-0.5">Reserve a Table</h3>
+      <p class="type-xs text-stone-600 mt-1">Complete your details below to open a pre-filled WhatsApp booking message.</p>
+
+      <form data-booking-form="modal" class="space-y-3.5 mt-5">
+        <div>
+          <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Your Name *</label>
+          <input type="text" id="modal-name" required placeholder="e.g. Aina" class="size-w-full px-3.5 py-2.5 rounded-xl bg-white border border-stone-300 type-sm focus:outline-none focus:border-moss" />
+        </div>
+
+        <div>
+          <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Booking Type</label>
+          <select id="modal-purpose" class="size-w-full px-3.5 py-2.5 rounded-xl bg-white border border-stone-300 type-sm focus:outline-none focus:border-moss">
+            <option value="Table Reservation">Table Reservation</option>
+            <option value="Table Reservation (Harvest Platter)">Table Reservation (Harvest Platter)</option>
+            <option value="Table Reservation (Nusantara Feast)">Table Reservation (Nusantara Feast)</option>
+            <option value="Weekend Brunch">Weekend Brunch</option>
+            <option value="Birthday / Celebration">Birthday / Celebration</option>
+            <option value="Group / Private Event">Group / Private Event</option>
+          </select>
+        </div>
+
+        <div class="layout-grid grid-columns-3 gap-2.5">
+          <div>
+            <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Date *</label>
+            <input type="date" id="modal-date" required class="size-w-full px-3 py-2.5 rounded-xl bg-white border border-stone-300 type-xs sm-type-sm focus:outline-none focus:border-moss" />
+          </div>
+          <div>
+            <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Time *</label>
+            <input type="time" id="modal-time" required class="size-w-full px-3 py-2.5 rounded-xl bg-white border border-stone-300 type-xs sm-type-sm focus:outline-none focus:border-moss" />
+          </div>
+          <div>
+            <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Pax *</label>
+            <input type="number" id="modal-pax" min="1" max="40" value="2" required class="size-w-full px-3 py-2.5 rounded-xl bg-white border border-stone-300 type-xs sm-type-sm focus:outline-none focus:border-moss" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Notes (Optional)</label>
+          <input type="text" id="modal-notes" placeholder="e.g. Window table, baby chair" class="size-w-full px-3.5 py-2.5 rounded-xl bg-white border border-stone-300 type-sm focus:outline-none focus:border-moss" />
+        </div>
+
+        <button type="submit" class="size-w-full py-3.5 px-5 rounded-full bg-moss hover-bg-moss-dark text-oat weight-semibold type-sm shadow-md ui-transition mt-2">
+          Send Booking on WhatsApp →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== 10. FULL MENU PDF MODAL ==================== -->
+  <div id="pdfModal" class="fixed inset-0 z-50 hidden layout-items-center layout-justify-center bg-black/70 backdrop-blur-xs p-3 sm:p-6">
+    <div class="bg-oat size-w-full size-max-w-4xl size-h-modal rounded-3xl overflow-hidden shadow-2xl layout-flex layout-column border border-bark/10">
+      <div class="px-5 py-4 bg-white border-b border-stone-200 layout-flex layout-items-center layout-justify-between">
+        <div>
+          <h3 class="type-serif weight-bold type-lg text-bark">Treefort Cafe — Full Menu</h3>
+          <p class="type-xs text-stone-500">All prices in RM. Please inform our staff of any food allergies.</p>
+        </div>
+        <div class="layout-flex layout-items-center gap-2">
+          <button type="button" data-book-pdf class="px-4 py-2 rounded-full bg-moss text-oat type-xs weight-semibold">
+            Book Table
+          </button>
+          <button type="button" data-close-pdf class="size-w-8 size-h-8 rounded-full bg-linen hover-bg-stone-200 layout-flex layout-items-center layout-justify-center text-bark weight-bold">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <div class="layout-flex-1 bg-linen/50 layout-flex layout-column layout-items-center layout-justify-center p-6 text-center">
+        <!--
+          [EDIT HERE] EMBED YOUR FULL PDF MENU:
+          Option A (Google Drive): Upload your menu PDF to Google Drive -> Share -> "Anyone with the link" -> copy link -> change "/view" at the end to "/preview".
+          Option B (Local PDF file): Put "menu.pdf" in the same folder as this HTML file, delete the placeholder <div> below, and uncomment this iframe:
+          <iframe src="menu.pdf" class="size-w-full size-h-full border-0" title="Treefort Cafe Menu PDF"></iframe>
+        -->
+        <div class="size-max-w-md space-y-3">
+          <div class="size-w-12 size-h-12 rounded-2xl bg-moss/10 text-moss layout-flex layout-items-center layout-justify-center mx-auto weight-bold type-lg">PDF</div>
+          <h4 class="type-serif type-xl weight-bold text-bark">Treefort Cafe Digital Menu</h4>
+          <p class="type-sm text-stone-600">
+            Upload Treefort Cafe's menu PDF to Google Drive (shared as <strong>"Anyone with the link"</strong>) and paste the link into <code class="bg-stone-200 px-1.5 py-0.5 rounded type-xs">CAFE_CONFIG.menuPdfUrl</code>.
+          </p>
+          <a id="pdfExternalLink" href="#" target="_blank" rel="noopener" class="inline-block mt-2 px-5 py-2.5 rounded-full bg-moss text-oat type-xs weight-semibold">
+            Open Menu PDF Link ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
