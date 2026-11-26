@@ -170,6 +170,18 @@ body > footer {
   min-width: 0;
 }
 
+.booking-date-fields input[type="date"],
+.booking-date-fields input[type="time"] {
+  max-width: 100%;
+  min-width: 0;
+  padding-inline: 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: left;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .hover-bg-bark:hover { background-color: #26231E; }
 .hover-bg-linen:hover { background-color: #E9E0D0; }
 .hover-bg-moss-dark:hover { background-color: #222719; }
