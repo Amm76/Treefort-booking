@@ -5,8 +5,8 @@ const CAFE_CONFIG = {
   name: "Treefort Cafe",
   instagramUrl: "https://www.instagram.com/treefortcafe/",
   // [EDIT HERE] Cafe's WhatsApp number (format: 60123456789 without '+' or spaces)
-  whatsappNumber: "60123456789",
-  displayPhone: "+60 12-345 6789",
+  whatsappNumber: "601773977855",
+  displayPhone: "+60 17-739 7785",
   // [EDIT HERE] Paste your Google Drive PDF link (or "menu.pdf" if hosted in same folder)
   menuPdfUrl: "https://drive.google.com/",
   // [EDIT HERE] Google Places API (New) credentials for automatic live reviews
@@ -17,10 +17,10 @@ const CAFE_CONFIG = {
 // [EDIT HERE] Fallback customer reviews shown before Google API key is connected
 const FALLBACK_REVIEWS = [
   {
-    author: "Nadia R.",
+    author: "Ishkandar Shah (ISH)",
     rating: 5,
-    relativeTime: "1 week ago",
-    text: "Such a calming green aesthetic! Their Uji Matcha Cloud and Treefort Timber Breakfast are easily among my favorites.",
+    relativeTime: "3 month ago",
+    text: "Stunning just Stunning.First time coming here. Never thought such a perfect place exist.The food is tasty. Service fast. Unlike what was reviewed previously by others. Good to see that they've improved.AND THE VIEW IS AMAZING. GOING TO COME BACK AND MAKE PARTIES HERE. Oh BTW, before walking into the restaurant, you can dare your self to the test of heights. I wasn't brave enough.",
   },
   {
     author: "Marcus L.",
