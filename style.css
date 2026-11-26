@@ -182,6 +182,15 @@ body > footer {
   appearance: none;
 }
 
+@media (max-width: 767px) {
+  [data-booking-form] input,
+  [data-booking-form] select,
+  .booking-date-fields input[type="date"],
+  .booking-date-fields input[type="time"] {
+    font-size: 1rem;
+  }
+}
+
 .hover-bg-bark:hover { background-color: #26231E; }
 .hover-bg-linen:hover { background-color: #E9E0D0; }
 .hover-bg-moss-dark:hover { background-color: #222719; }
