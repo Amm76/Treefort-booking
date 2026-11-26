@@ -74,6 +74,32 @@ window.addEventListener("DOMContentLoaded", () => {
     const target = event.target instanceof Element ? event.target : null;
     if (!target) return;
 
+    const mobileNavToggle = target.closest("[data-toggle-mobile-nav]");
+    if (mobileNavToggle) {
+      const mobileNav = document.getElementById("mobileNav");
+      if (!mobileNav) return;
+
+      const isOpen = mobileNav.classList.toggle("is-open");
+      mobileNavToggle.setAttribute("aria-expanded", String(isOpen));
+      mobileNavToggle.setAttribute("aria-label", isOpen ? "Close page navigation" : "Open page navigation");
+      mobileNav.setAttribute("aria-hidden", String(!isOpen));
+      return;
+    }
+
+    if (target.closest("#mobileNav a")) {
+      const mobileNav = document.getElementById("mobileNav");
+      const mobileNavToggle = document.querySelector("[data-toggle-mobile-nav]");
+      if (mobileNav) {
+        mobileNav.classList.remove("is-open");
+        mobileNav.setAttribute("aria-hidden", "true");
+      }
+      if (mobileNavToggle) {
+        mobileNavToggle.setAttribute("aria-expanded", "false");
+        mobileNavToggle.setAttribute("aria-label", "Open page navigation");
+      }
+      return;
+    }
+
     const languageButton = target.closest("#btn-en, #btn-bm");
     if (languageButton) {
       setLanguage(languageButton.id === "btn-en" ? "en" : "bm");
