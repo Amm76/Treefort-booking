@@ -5,7 +5,7 @@ const CAFE_CONFIG = {
   name: "Treefort Cafe",
   instagramUrl: "https://www.instagram.com/treefortcafe/",
   // [EDIT HERE] Cafe's WhatsApp number (format: 60123456789 without '+' or spaces)
-  whatsappNumber: "601773977855",
+  whatsappNumber: "60177397785",
   displayPhone: "+60 17-739 7785",
   // [EDIT HERE] Paste your Google Drive PDF link (or "menu.pdf" if hosted in same folder)
   menuPdfUrl: "https://drive.google.com/",
