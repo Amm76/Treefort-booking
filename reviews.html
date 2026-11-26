@@ -176,7 +176,7 @@
 
   <!-- ==================== 9. POPUP BOOKING MODAL ==================== -->
   <div id="bookingModal" class="fixed inset-0 z-50 hidden layout-items-center layout-justify-center bg-black/60 backdrop-blur-xs p-4">
-    <div class="bg-oat text-bark size-w-full size-max-w-md rounded-3xl p-6 sm:p-7 shadow-2xl border border-bark/10 relative">
+    <div class="booking-modal-dialog bg-oat text-bark size-w-full size-max-w-md rounded-3xl p-6 sm:p-7 shadow-2xl border border-bark/10 relative">
       <button type="button" data-close-booking aria-label="Close modal" class="absolute top-5 right-5 size-w-8 size-h-8 rounded-full bg-linen hover-bg-stone-300 layout-flex layout-items-center layout-justify-center text-bark weight-bold">
         ✕
       </button>
@@ -203,7 +203,7 @@
           </select>
         </div>
 
-        <div class="layout-grid grid-columns-3 gap-2.5">
+        <div class="booking-date-fields">
           <div>
             <label class="block type-xs weight-bold uppercase type-track-wide text-stone-600 mb-1">Date *</label>
             <input type="date" id="modal-date" required class="size-w-full px-3 py-2.5 rounded-xl bg-white border border-stone-300 type-xs sm-type-sm focus:outline-none focus:border-moss" />
